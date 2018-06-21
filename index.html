@@ -27,6 +27,8 @@
     context.moveTo(lastX, lastY);
     context.lineTo(e.offsetX, e.offsetY);
     context.stroke();
+    lastX = e.offsetX;
+    lastY = e.offsetY;
   }
 
   canvas.addEventListener('mousemove', draw);

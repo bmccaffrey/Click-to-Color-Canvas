@@ -37,6 +37,15 @@
     if (hue >= 360) {
       hue = 0;
     }
+
+    if (context.lineWidth >= 50 || context.lineWidth <= 1) {
+      direction = !direction;
+    }
+    if (direction) {
+      context.lineWidth++;
+    } else {
+      context.lineWidth--;
+    }
   }
 
   canvas.addEventListener('mousedown', (e) => {
